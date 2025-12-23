@@ -7,7 +7,7 @@ on:
       - master
     tags:
       - 'v*'
-  pull_request:
+  pull_request:  # Build (but don't push) on PRs for validation
     branches:
       - main
       - master
