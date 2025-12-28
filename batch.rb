@@ -4,10 +4,11 @@
 #
 
 QUEUE_PATH = '/mnt/media/queue.txt'
-
+puts "starting batch: #{ARGV}"
 while true
   content = File.read(QUEUE_PATH)
   input = content.match(/^.*\R/).to_s.chomp
+  puts "input #{input}"
 
   break if input.empty?
 
