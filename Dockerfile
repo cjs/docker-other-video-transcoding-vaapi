@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y \
 # Create output directory and app directory
 RUN mkdir -p /output && mkdir -p /app
 
+# Copy batch script
+COPY batch.rb /app
+
 # Clone the latest version of the other_video_transcoding scripts
 RUN git clone --depth 1 https://github.com/lisamelton/other_video_transcoding.git /tmp/other_video_transcoding \
     && cp /tmp/other_video_transcoding/*.rb /app/ \
