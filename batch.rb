@@ -3,7 +3,7 @@
 # batch.rb
 #
 
-QUEUE_PATH = 'queue.txt'
+QUEUE_PATH = '/mnt/media/queue.txt'
 
 while true
   content = File.read(QUEUE_PATH)
@@ -15,5 +15,5 @@ while true
   queue.print content.sub(/^.*\R/, '')
   queue.close
 
-  break unless system('other-transcode.rb', *ARGV, input)
+  break unless system('/app/other-transcode.rb', *ARGV, input)
 end

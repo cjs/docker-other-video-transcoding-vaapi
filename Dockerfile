@@ -32,7 +32,7 @@ USER ${UID}:${GID}
 # Set working directory to output directory
 WORKDIR /output
 
-ENTRYPOINT ["/app/other-transcode.rb"]
+ENTRYPOINT ["/app/batch.rb"]
 
 # Default command (can be overridden at runtime)
-CMD []
+CMD ["--add-audio eng --vaapi --hevc --10-bit --add-subtitle eng"]
