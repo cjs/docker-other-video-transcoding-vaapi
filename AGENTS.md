@@ -57,7 +57,7 @@ Algorithm (high level):
 1. Read `queue.txt`
 2. Take the first line as the next input path
 3. Rewrite `queue.txt` without that first line
-4. Run: ` /app/other-transcode.rb <your args> <input> `
+4. Run: `/app/other-transcode.rb <your args> <input>`
 5. Repeat until the queue is empty or a transcode fails
 
 Notes for maintainers:
